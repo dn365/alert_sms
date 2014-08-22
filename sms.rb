@@ -16,8 +16,8 @@ class Sms
     when "oracle"
       url = "jdbc:oracle:thin:#{options["username"]}/#{options["password"]}@#{options["host"]}:#{options["port"]}:#{options["database"]}"
     end
-    DB = if url
-      Sequel.connect(url,:max_connections => options["pool"],:logger => options["logger"], :pool_timeout => options["pool_timeout"], :login_timeout=> options["login_timeout"])
+    if url
+      DB = Sequel.connect(url,:max_connections => options["pool"],:logger => options["logger"], :pool_timeout => options["pool_timeout"], :login_timeout=> options["login_timeout"])
     end
   end
 
