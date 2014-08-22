@@ -1,0 +1,9 @@
+default:
+  adapter: oracle
+  encoding: utf8
+  host: zjbjbak2
+  port: 1521
+  database: test_sms
+  pool: 10
+  username: admin
+  password: admin
